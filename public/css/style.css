@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: azure;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Container Style */
+.container {
+    width: 100%;
+    padding-right: 13px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+.follow-me {
+    display: flex;
+    justify-content: start;
+}
+
+.follow-me img {
+    margin-top: 10px;
+    object-fit: cover;
+    width: 50px;
+    height: auto;
+}
+
+.follow-me .fb {
+    margin-bottom: 5px;
+    width: auto;
+    height: 45px;
+}
+
+.bhs {
+    display: flex;
+    justify-content: center;
+}
+
+.bhs img {
+    width: 100px;
+    height: auto;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #fff;
+    color: #000;
+    padding: 25px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navbar-brand .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+/* End Navbar styles */
+
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #353a40;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.active {
+    left: 0;
+}
+ 
+.sidebar .close-btn {
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 20px 10px;
+}
+
+.sidebar-links li {
+    padding: 10px 0;
+}
+
+.sidebar-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-radius: 3px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+}
+
+.sidebar-links a:hover {
+    color: #fff;
+    background-color: #AA77FF;
+}
+/* End Sidebar */
+
+
+/* Main content */
+.content {
+    padding-left: 45px;
+    padding-top: 90px;
+    transition: margin-left 0.3s ease;
+}
+
+.content.shifted {
+    margin-left: 250px;
+}
+
+/* End Main content */
+.menu ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+#active {
+    color: #AA77FF;
+    font-size: 15px;
+}
+
+.menu-item {
+    padding-left: 40px;
+    list-style: none;
+
+}
+
+.menu-item a {
+    color: inherit;
+    transition: font-size 0.5s;
+}
+
+.menu-item a:hover {
+    color: #AA77FF;
+    font-size: 15px;
+}
+
+.contact {
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    animation-name: spear;
+    animation-duration: 4s;
+}
+
+.contact img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    aspect-ratio: 3/2;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    margin-top: 110px;
+    animation-name: spear;
+    animation-duration: 4s;
+}
+
+@keyframes spear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64vh;
+}
+
+.card {
+    /* background-color: white; */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 0.5px solid #000;
+    border-left: 5px solid #AA77FF;
+    align-items: center;
+}
+
+.card-body {
+    align-items: center;
+}
+
+.card-img {
+    border-radius: 100%;
+    width: 100px;
+    height: auto;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #000;
+    font-size: 12px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.btn {
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-violet {
+    background-color: #AA77FF;
+}
+
+.btn-violet:hover {
+    color: #b6b4b4;
+    background-color: rgb(118, 36, 196);
+    cursor: pointer;
+}
+
+.breadcumb {
+    margin-bottom: 20px;
+    font-style: bold;
+}
+
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+/* Footer */
+.footer {
+    padding: 48px;
+    text-align: center;
+    background-color: azure;
+    margin-top: 20px;
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 875px) {
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+
+/* untuk container */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 855px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* untuk container */
+
+
+
+/* untuk sidebar */
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        order: 2;
+    }
+
+    .sidebar {
+        left: 0;
+    }
+
+    .content {
+        left: 0px;
+    }
+}
