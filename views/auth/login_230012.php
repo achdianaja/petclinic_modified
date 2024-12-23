@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_POST['login'])) {
-    include '../../../koneksi.php';
+    include '../../koneksi.php';
 
     $query = "SELECT * FROM users_230012 WHERE username_230012='$_POST[username_230012]'";
 
@@ -18,7 +18,7 @@ if (isset($_POST['login'])) {
             $_SESSION['fullname'] = $user['fullname_230012'];
             $_SESSION['user_photo'] = $user['user_photo_230012'];
 
-            echo "<script>alert('Login Success !');window.location.replace('../../../index.php')</script>";
+            echo "<script>alert('Login Success !');window.location.replace('../../index.php')</script>";
         } else {
             echo "<script>alert('Login Failed, Wrong Password !');window.location.replace('form_login_230012.php')</script>";
         }
